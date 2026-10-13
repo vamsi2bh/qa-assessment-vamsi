@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Account ABC - Rebalancer</title>
+</head>
+<body>
+	<h1>Account ABC - Rebalancer</h1>
+	<label>Total assets ($) <input data-testid="total-assets" value="100000" /></label>
+	<table border="1" data-testid="holdings">
+		<thead>
+			<tr><th>Security</th><th>Target %</th><th>Current %</th><th>Target variance</th><th>Unit price</th><th>Action</th><th>Number of shares</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>IBM</td>
+				<td><input data-testid="target-IBM" value="20" /></td>
+				<td><input data-testid="current-IBM" value="10" /></td>
+				<td data-testid="variance-IBM"></td>
+				<td><input data-testid="price-IBM" value="150" /></td>
+				<td data-testid="action-IBM"></td>
+				<td data-testid="shares-IBM"></td>
+			</tr>
+			<tr>
+				<td>MSFT</td>
+				<td><input data-testid="target-MSFT" value="20" /></td>
+				<td><input data-testid="current-MSFT" value="20" /></td>
+				<td data-testid="variance-MSFT"></td>
+				<td><input data-testid="price-MSFT" value="90" /></td>
+				<td data-testid="action-MSFT"></td>
+				<td data-testid="shares-MSFT"></td>
+			</tr>
+			<tr>
+				<td>ORCL</td>
+				<td><input data-testid="target-ORCL" value="20" /></td>
+				<td><input data-testid="current-ORCL" value="30" /></td>
+				<td data-testid="variance-ORCL"></td>
+				<td><input data-testid="price-ORCL" value="220" /></td>
+				<td data-testid="action-ORCL"></td>
+				<td data-testid="shares-ORCL"></td>
+			</tr>
+			<tr>
+				<td>AAPL</td>
+				<td><input data-testid="target-AAPL" value="20" /></td>
+				<td><input data-testid="current-AAPL" value="20" /></td>
+				<td data-testid="variance-AAPL"></td>
+				<td><input data-testid="price-AAPL" value="450" /></td>
+				<td data-testid="action-AAPL"></td>
+				<td data-testid="shares-AAPL"></td>
+			</tr>
+			<tr>
+				<td>HD</td>
+				<td><input data-testid="target-HD" value="20" /></td>
+				<td><input data-testid="current-HD" value="20" /></td>
+				<td data-testid="variance-HD"></td>
+				<td><input data-testid="price-HD" value="70" /></td>
+				<td data-testid="action-HD"></td>
+				<td data-testid="shares-HD"></td>
+			</tr>
+		</tbody>
+	</table>
+	<button data-testid="calculate">Calculate</button>
+	<ul data-testid="errors"></ul>
+	<script src="rebalance.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
